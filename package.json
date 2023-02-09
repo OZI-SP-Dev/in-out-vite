@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build:test": "tsc --noEmit && vite build --mode testing && npm run mergeaspx",
     "build": "tsc --noEmit && vite build && npm run mergeaspx",
     "mergeaspx": "concat -o dist/index.aspx dist/index.aspx dist/index.html"
