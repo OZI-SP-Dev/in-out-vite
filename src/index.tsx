@@ -10,8 +10,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 initializeIcons();
 
 if (import.meta.env.DEV) {
-  const worker = require("mocks/browser.ts");
-  worker.start({
+  const browser = await import("./mocks/browser.js" as any);
+  browser.worker.start({
     onUnhandledRequest(
       req: { url: { pathname: string } },
       print: { warning: () => void }
